@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfAppForFoodProj.MonitorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppForFoodProj"
+        mc:Ignorable="d"
+        Title="MonitorWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Add Food Name" HorizontalAlignment="Left" Height="48" Margin="44,74,0,0" VerticalAlignment="Top" Width="164"/>
+        <Label Content="Add Food Calories" HorizontalAlignment="Left" Height="48" Margin="44,127,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.418,2.115"/>
+        <Label Content="Add Food Ingridients" HorizontalAlignment="Left" Height="48" Margin="44,180,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.418,2.115"/>
+        <Label Content="Add Food Grade" HorizontalAlignment="Left" Height="48" Margin="44,233,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.418,2.115"/>
+
+        <TextBox x:Name="FoodNameTB" HorizontalAlignment="Left" Height="48" Margin="275,79,0,0" TextWrapping="Wrap" Text="{Binding Path=FoodVmObj.Name, Mode=TwoWay}" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="FoodCaloriesTB" HorizontalAlignment="Left" Height="48" Margin="275,132,0,0" TextWrapping="Wrap" Text="{Binding Path=FoodVmObj.Calories, Mode=TwoWay}" VerticalAlignment="Top" Width="258" RenderTransformOrigin="-0.252,0.389"/>
+        <TextBox x:Name="FoodIngridiantsTB" HorizontalAlignment="Left" Height="48" Margin="275,185,0,0" TextWrapping="Wrap" Text="{Binding Path=FoodVmObj.Ingridients, Mode=TwoWay}" VerticalAlignment="Top" Width="258"/>
+        <TextBox x:Name="FoodGradeTB" HorizontalAlignment="Left" Height="48" Margin="275,238,0,0" TextWrapping="Wrap" Text="{Binding Path=FoodVmObj.Grade, Mode=TwoWay}" VerticalAlignment="Top" Width="258"/>
+
+        <Button Command="{Binding MyAddNewFoodDelegate}" Content="Submit" HorizontalAlignment="Left" Height="28" Margin="171,345,0,0" VerticalAlignment="Top" Width="93"/>
+
+    </Grid>
+</Window>
